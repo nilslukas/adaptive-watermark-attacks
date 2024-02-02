@@ -1,0 +1,18 @@
+watermarking_key_args:
+  name: trw
+  key_ckpt: ../pretrained_models/trw-stable-diffusion-v1_1-base.pt # where to save the key
+
+  w_channel: 3
+  w_pattern: ring
+  w_mask_shape: circle
+  w_radius: 10
+  w_measurement: l1_complex
+  w_injection: complex
+  w_pattern_const: 0.0
+  inversal_model: CompVis/stable-diffusion-v1-1
+
+model_args:  # arguments to instantiate the model.
+  model_name: stable-diffusion-1
+  model_ckpt: CompVis/stable-diffusion-v1-1 # load from the hub
+  scheduler_timesteps: 20
+
