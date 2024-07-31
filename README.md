@@ -19,7 +19,7 @@
     <p>Leveraging Optimization for Adaptive Attacks on Image Watermarks</p>
 </h1>
 
-This repository is the official implementation of two papers 
+This repository is the official implementation of our paper 
 *"Leveraging Optimization for Adaptive Attacks on Image Watermarks"*.
 
 * KeyGen: Generate watermarking keys 
