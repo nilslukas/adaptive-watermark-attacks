@@ -2,7 +2,6 @@ evasion_args:
   attack_name: jpeg-compression                             # the name of the attack
   root_folder: generated_images/trw001     # the source location of the watermarked images
   output_folder: generated_images/trw_jepg_evade001  # the destination of the perturbed images
-  randomize_strength: True                                  # attack parameters
 
 env_args:   # machine specs.
   batch_size: 16

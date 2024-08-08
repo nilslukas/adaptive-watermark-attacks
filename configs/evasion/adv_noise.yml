@@ -1,0 +1,15 @@
+evasion_args:
+  attack_name: advnoise              # name of the attack
+  adaptive_noise_epsilon: 0.015686   # epsilon=4/255
+  adaptive_noise_lr: 0.05            # attack parameters
+  adaptive_noise_opt_steps: 5
+
+  # the surrogate key that was trained on stable-diffusion-1-1
+  surr_key_ckpt: https://www.dropbox.com/scl/fi/n3xkqhelmyyigoangwohp/trw-stable-diffusion-v1_1-base.pt.zip?rlkey=g1j0va1jb6hm7cdkel1olbdl7&dl=1
+
+  root_folder: generated_images/trw001     # the source location of the watermarked images
+  output_folder: generated_images/trw_advnoise_evade001  # the destination of the perturbed images
+
+env_args: # Machine specs. If out of memory, reduce batch-size.
+  batch_size: 4
+  seed: 0

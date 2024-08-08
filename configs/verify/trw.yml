@@ -8,7 +8,8 @@ model_args: # arguments to instantiate the model.
   scheduler_timesteps: 20
 
 detect_args:
-  image_folder: generated_images/trw001     # the folder name where all (potentially) watermarked images are stored
+  image_folder: generated_images/trw_advnoise_evade001
+  # image_folder: generated_images/trw001     # the folder name where all (potentially) watermarked images are stored
 
 env_args: # Machine specs. If out of memory, reduce batch-size.
   batch_size: 16
