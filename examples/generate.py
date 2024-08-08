@@ -14,7 +14,7 @@ from src.arguments.wm_key_args import WatermarkingKeyArgs
 from src.datasets.prompt_dataset import PromptDataset
 from src.models.generators.image_generator import ImageGenerator
 from src.models.model_factory import ModelFactory
-from src.utils.highlited_print import bcolors
+from src.utils.highlited_print import bcolors, print_warning
 from src.utils.utils import set_random_seed
 from src.watermarking_key.wm_key_factory import WatermarkingKeyFactory
 
@@ -59,6 +59,8 @@ def generate_images(generate_image_args: GenerateImageArgs,
             wm_key = wm_key.keygen(generator=generator)
             print(f"> Generated and saved the watermarking key {wm_key}.")
         print(f"> Watermarking Message Set: {wm_key.get_message()}")
+    else:
+        print_warning(f"No watermarking algorithm specified. Generating images without a watermark.")
 
     generator.set_watermarking_key(wm_key)
 

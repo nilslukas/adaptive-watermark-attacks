@@ -1,0 +1,18 @@
+watermarking_key_args: # path to the watermarking key (output of keygen.py)
+  name: trw
+  key_ckpt: pretrained_models/trw-stable-diffusion-2-base.pt # local or remote path
+
+gen_img_args:
+  outdir: generated_images/trw001       # output folder
+  num_images: 1                         # number of generated images per prompt
+  dataset: assets/coco.json             # file that contains all prompts
+  start_prompt: 500                     # prompt index to start at
+  end_prompt: 550                       # prompt index to end at
+
+model_args: # arguments to instantiate the image generator.
+  model_name: stable-diffusion-2
+  model_ckpt: stabilityai/stable-diffusion-2-1
+  scheduler_timesteps: 20
+
+env_args: # Machine specs. If out of memory, reduce batch-size.
+  batch_size: 8

@@ -97,7 +97,7 @@ def plot_images(x: torch.Tensor, n_row=None, dpi=400, savefig=None, title=None):
     x = x.detach().cpu()
     x = normalize_image(x)
     matplotlib.rcParams["figure.dpi"] = dpi
-    grid_img = torchvision.utils.make_grid(x, nrow=n_row, range=(0, 1), scale_each=True, normalize=True)
+    grid_img = torchvision.utils.make_grid(x, nrow=n_row, value_range=(0, 1), scale_each=True, normalize=True)
     plt.axis('off')
     if title is not None:
         plt.title(title)
