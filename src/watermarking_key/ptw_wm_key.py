@@ -8,7 +8,6 @@ from tqdm import tqdm
 
 from src.arguments.wm_key_args import PTWWatermarkingKeyArgs
 from src.criteria.lpips_loss import LPIPSLoss
-from src.model_converter.model_converter_3 import ModelConverter3
 from src.models.generators.image_generator import ImageGenerator
 from src.models.model_factory import ModelFactory
 from src.utils.highlited_print import bcolors, print_warning

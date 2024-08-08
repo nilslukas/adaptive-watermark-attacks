@@ -4,7 +4,6 @@ from src.arguments.model_args import ModelArgs
 from src.arguments.wm_key_args import WatermarkingKeyArgs
 from src.models.autoencoders.stega import StegaStampEncoder, StegaStampDecoder
 from src.models.generators.image_generator import ImageGenerator
-from src.models.generators.ptw_stable_diffusion import PTWStableDiffusion
 from src.models.generators.sdw_stable_diffusion import SDWStableDiffusion
 from src.models.generators.stable_diffusion import StableDiffusion
 from src.models.generators.trw_stable_diffusion import TRWStableDiffusion
@@ -46,8 +45,6 @@ class ModelFactory:
                 return StableDiffusion(model_args=model_args, env_args=env_args)
             elif wm_key_args.name == "sdw":
                 return SDWStableDiffusion(model_args=model_args, env_args=env_args)  # no model change required
-            elif wm_key_args.name == "ptw":
-                return PTWStableDiffusion(model_args=model_args, env_args=env_args)
             elif wm_key_args.name == "trw":
                 return TRWStableDiffusion(model_args=model_args, env_args=env_args)
             elif wm_key_args.name == "wdm":

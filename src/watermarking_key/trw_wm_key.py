@@ -162,6 +162,7 @@ class TRWWatermarkingKey(WatermarkingKey):
             WatermarkingKeyArgs.WM_KEY_ARGS_KEY: self.wm_key_args,
         }
         if ckpt_fn:
+            os.makedirs(os.path.dirname(ckpt_fn), exist_ok=True)
             torch.save(state_dict, ckpt_fn)
             print(f"> Saved TRW watermarking key to '{bcolors.OKGREEN}{os.path.abspath(ckpt_fn)}{bcolors.ENDC}'")
         return state_dict
